@@ -21,6 +21,9 @@ public class MouseControl : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
+        Physics.IgnoreLayerCollision(6, 7, true);
+
         rb = GetComponent<Rigidbody>();
         mouseNoise = GetComponent<AudioSource>();
         previousPosition = rb.position;
@@ -69,25 +72,7 @@ public class MouseControl : MonoBehaviour
     }
 
 
-
     /*
-    void UpdateMovement()
-    {
-        // Get mouse position in world coordinates
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.y));
-
-        // Calculate clamped target position based on mouse position and boundaries
-        float clampedX = Mathf.Clamp(mousePos.x, -boundary, boundary);
-        float clampedZ = Mathf.Clamp(mousePos.z, -boundary, boundary);
-        Vector3 targetPosition = new Vector3(clampedX, 0f, clampedZ);
-
-        // Smoothly lerp to the target position
-        rb.position = Vector3.SmoothDamp(rb.position, targetPosition, ref currentVelocity, smoothTime, moveSpeed);
-
-        // Optional: Keep the GameObject's y position unchanged
-        rb.position = new Vector3(rb.position.x, 0f, rb.position.z);
-    }*/
-
     void UpdateMovement()
     {
         // Get mouse position in world coordinates
@@ -124,53 +109,52 @@ public class MouseControl : MonoBehaviour
 
             rb.constraints = RigidbodyConstraints.FreezeRotation;
         }
+    }*/
+
+    void UpdateMovement()
+{
+    // Get the aspect ratio of the screen
+    float screenAspectRatio = (float)Screen.width / Screen.height;
+
+    // Calculate the adjusted boundary based on the screen aspect ratio
+    float adjustedBoundary = boundary * screenAspectRatio;
+
+    // Get mouse position in world coordinates
+    Vector3 mousePos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.y));
+
+
+    // Calculate clamped target position based on mouse position and adjusted boundaries
+    float clampedX = Mathf.Clamp(mousePos.x, -adjustedBoundary, adjustedBoundary);
+    float clampedZ = Mathf.Clamp(mousePos.z, -boundary, boundary); // Assuming vertical boundaries remain unchanged
+    Vector3 targetPosition = new Vector3(clampedX, 0f, clampedZ);
+
+    // Raycast to check for obstacles before moving
+    Vector3 moveDirection = targetPosition - rb.position;
+    RaycastHit hit;
+    if (Physics.Raycast(rb.position, moveDirection, out hit, moveDirection.magnitude))
+    {
+        // Adjust target position to avoid obstacles
+        targetPosition = hit.point - moveDirection.normalized * 0.1f; // Move slightly away from the obstacle
     }
 
-
-
-
-    /*
-    void UpdateMovement()
+    if (Vector3.Distance(transform.position, targetPosition) < .1f)
     {
-        // Get mouse position in viewport coordinates
-        Vector3 mousePosViewport = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+    }
+    else
+    {
+        // Smoothly lerp to the target position
+        rb.position = Vector3.SmoothDamp(rb.position, targetPosition, ref currentVelocity, smoothTime, moveSpeed);
 
-        // Calculate target position based on mouse position and screen aspect ratio
-        float aspectRatio = (float)Screen.width / Screen.height;
-        float targetX = (mousePosViewport.x - 0.5f) * boundary * 2f * aspectRatio;
-        float targetZ = (mousePosViewport.y - 0.5f) * boundary * 2f;
-        targetPosition = new Vector3(targetX, 0f, targetZ);
+        // Optional: Keep the GameObject's y position unchanged
+        rb.position = new Vector3(rb.position.x, 0f, rb.position.z);
 
-        // Calculate the move direction
-        Vector3 moveDirection = (targetPosition - rb.position).normalized;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+    }
+}
 
-        // Calculate the desired force based on the move direction and speed
-        Vector3 desiredForce = moveDirection * moveSpeed;
 
-        // Calculate the force to apply based on the difference between desired and current velocity
-        Vector3 force = (desiredForce - rb.velocity) * acceleration;
 
-        // Apply the force to the rigidbody
-        rb.AddForce(force, ForceMode.Acceleration);
-
-        // Ensure the object stays within the specified boundaries
-        Vector3 clampedPosition = new Vector3(
-            Mathf.Clamp(rb.position.x, -boundary * aspectRatio, boundary * aspectRatio),
-            0f,
-            Mathf.Clamp(rb.position.z, -boundary, boundary)
-        );
-
-        
-        if (Vector3.Distance(transform.position, targetPosition) < .1f)
-        {
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-        }
-        else
-        {
-            rb.position = clampedPosition;
-            rb.constraints = RigidbodyConstraints.FreezeRotation;
-        }
-    }*/
 
 
 }

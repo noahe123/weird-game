@@ -1,29 +1,12 @@
 fileFormatVersion: 2
-guid: feec435420bda77439bb662bc79cf242
+guid: 1eaee2ae2aa52a045b34ec081496b312
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bottom Edge
-    second: {fileID: 2100000, guid: ba5e7e266a635ea479c089cdba36ae68, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Left Mouse Button
-    second: {fileID: 2100000, guid: 56b0d3e165d98c744a83ea618887d019, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: b975b17b2d78d9c49a7cb3b6ad4b4b9e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Right Mouse Button
-    second: {fileID: 2100000, guid: c677f86c75713e34eab9118f560e6548, type: 2}
+      74: -623603649343465320
+    second: Scene
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
