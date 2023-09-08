@@ -10,6 +10,8 @@ public class Grab : MonoBehaviour
     public int isLeftOrRight;
     private bool isGrabbing = false;
 
+    FixedJoint fj;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -46,9 +48,9 @@ public class Grab : MonoBehaviour
                 animator.SetBool("isGrabRight", false);
             }
 
-            if (grabbedObj != null)
+            if (fj != null)
             {
-                Destroy(grabbedObj.GetComponent<FixedJoint>());
+                Destroy(fj);
             }
 
             grabbedObj = null;
@@ -65,7 +67,7 @@ public class Grab : MonoBehaviour
             {
                 grabbedObj = other.gameObject;
 
-                FixedJoint fj = grabbedObj.AddComponent<FixedJoint>();
+                fj = grabbedObj.AddComponent<FixedJoint>();
                 fj.connectedBody = rb;
                 fj.breakForce = 9001;
             }
@@ -77,6 +79,12 @@ public class Grab : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("exiting");
+
+        if (fj != null)
+        {
+            Destroy(fj);
+        }
+
 
     }
 }
