@@ -57,11 +57,11 @@ Material:
     m_Floats:
     - ScanLinesHeight: 0.58
     - StaticAmount: 20
-    - _Intensity: 0.39
+    - _Intensity: 0.306
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - StaticColor: {r: 1, g: 1, b: 1, a: 1}
+    - StaticColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
     - _Intensity: {r: 0, g: 0, b: 0, a: 0}
     - _OverlayColor: {r: 0.053014517, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
