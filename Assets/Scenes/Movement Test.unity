@@ -1010,6 +1010,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7645494328341607705, guid: 303d05cf3681a9b409630332cd9e53ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7681524778820095685, guid: 303d05cf3681a9b409630332cd9e53ba,
         type: 3}
       propertyPath: m_AngularXDrive.positionDamper
@@ -9202,7 +9207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22450096, guid: f907b1416ebdbf645a73183ab47aa2b8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0004272461
+      value: 0.00018310547
       objectReference: {fileID: 0}
     - target: {fileID: 22450760, guid: f907b1416ebdbf645a73183ab47aa2b8, type: 3}
       propertyPath: m_SizeDelta.x
@@ -10070,7 +10075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22493252, guid: f907b1416ebdbf645a73183ab47aa2b8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00016784668
+      value: 0.0005950928
       objectReference: {fileID: 0}
     - target: {fileID: 22493826, guid: f907b1416ebdbf645a73183ab47aa2b8, type: 3}
       propertyPath: m_AnchorMax.y
@@ -13343,6 +13348,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7645494328341607705, guid: 303d05cf3681a9b409630332cd9e53ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7681524778820095685, guid: 303d05cf3681a9b409630332cd9e53ba,
         type: 3}
       propertyPath: m_AngularXDrive.positionDamper
@@ -15063,6 +15073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645494328341607705, guid: 303d05cf3681a9b409630332cd9e53ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681524778820095685, guid: 303d05cf3681a9b409630332cd9e53ba,
         type: 3}
@@ -17790,6 +17805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645494328341607705, guid: 303d05cf3681a9b409630332cd9e53ba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7681524778820095685, guid: 303d05cf3681a9b409630332cd9e53ba,
         type: 3}
