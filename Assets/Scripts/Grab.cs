@@ -72,13 +72,13 @@ public class Grab : MonoBehaviour
                 fj.breakForce = 9001;
             }
 
-            Debug.Log("colliding");
+           // Debug.Log("colliding");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("exiting");
+        //Debug.Log("exiting");
 
         if (fj != null)
         {

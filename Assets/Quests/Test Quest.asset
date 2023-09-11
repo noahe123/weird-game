@@ -12,27 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
   m_Name: HeadingTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_useQuestTitle: 1
-  m_headingText:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_headingLevel: 1
---- !u!114 &-8283474063394609038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
-  m_Name: HeadingTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 4
   m_useQuestTitle: 1
   m_headingText:
     m_text: 
@@ -52,7 +32,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
   m_Name: BodyTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 7
   m_bodyText:
     m_text: Go find the cube.
     m_stringAsset: {fileID: 0}
@@ -73,6 +53,39 @@ MonoBehaviour:
   m_contentList:
   - {fileID: 670901453876329822}
   m_contentListSerializationProxy: []
+--- !u!114 &-4115731493353697295
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94e8fb3b9b54114cbe8185003729c1b, type: 3}
+  m_Name: SceneEventQuestAction
+  m_EditorClassIdentifier: 
+  m_guid: 65cee807-5547-4338-b9a3-4edfb998973c
+--- !u!114 &-3425376191482577087
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
+  m_Name: HeadingTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_useQuestTitle: 1
+  m_headingText:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_headingLevel: 1
 --- !u!114 &-3390427576180081698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
   m_Name: BodyTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 6
   m_bodyText:
     m_text: You found Mr. NPC's cube.
     m_stringAsset: {fileID: 0}
@@ -103,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
   m_Name: BodyTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 9
   m_bodyText:
     m_text: Find Cube
     m_stringAsset: {fileID: 0}
@@ -121,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
   m_Name: BodyTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 10
   m_bodyText:
     m_text: Thanks for finding that cube.
     m_stringAsset: {fileID: 0}
@@ -170,7 +183,8 @@ MonoBehaviour:
   m_rememberIfAbandoned: 0
   m_deleteWhenComplete: 0
   m_autostartConditionSet:
-    m_conditionList: []
+    m_conditionList:
+    - {fileID: 3378003946316626145}
     m_conditionCountMode: 0
     m_minConditionCount: 0
     m_numTrueConditions: 0
@@ -180,9 +194,7 @@ MonoBehaviour:
     m_minConditionCount: 0
     m_numTrueConditions: 0
   m_offerConditionsUnmetContentList: []
-  m_offerContentList:
-  - {fileID: -8283474063394609038}
-  - {fileID: 1013215030506852387}
+  m_offerContentList: []
   m_maxTimes: 1
   m_timesAccepted: 0
   m_cooldownSeconds: 3600
@@ -196,12 +208,12 @@ MonoBehaviour:
     - m_contentList: []
     - m_contentList: []
     - m_contentList: []
-  - m_actionList: []
+  - m_actionList:
+    - {fileID: 1425350218407599115}
     m_categorizedContentList:
     - m_contentList:
       - {fileID: 5218210597475247706}
-    - m_contentList:
-      - {fileID: 5791767338426582833}
+    - m_contentList: []
     - m_contentList:
       - {fileID: -9016014481282835803}
   - m_actionList: []
@@ -252,15 +264,18 @@ MonoBehaviour:
       - m_contentList: []
       - m_contentList: []
       - m_contentList: []
+    - m_actionList:
+      - {fileID: -4115731493353697295}
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList:
+        - {fileID: 4243993673424661780}
+      - m_contentList: []
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
-      - m_contentList: []
-      - m_contentList: []
-    - m_actionList: []
-      m_categorizedContentList:
-      - m_contentList: []
-      - m_contentList: []
+      - m_contentList:
+        - {fileID: -3425376191482577087}
       - m_contentList: []
     m_conditionSet:
       m_conditionList: []
@@ -294,7 +309,10 @@ MonoBehaviour:
       m_textTableFieldID: 0
     m_stateInfoList:
     - m_actionList: []
-      m_categorizedContentList: []
+      m_categorizedContentList:
+      - m_contentList: []
+      - m_contentList: []
+      - m_contentList: []
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList:
@@ -318,7 +336,7 @@ MonoBehaviour:
     m_canvasRect:
       serializedVersion: 2
       x: 200
-      y: 88
+      y: 95
       width: 120
       height: 48
   - m_id:
@@ -371,7 +389,7 @@ MonoBehaviour:
       height: 35
   m_textTable: {fileID: 0}
   m_goalEntityTypeName: 
-  m_nextContentID: 0
+  m_nextContentID: 11
 --- !u!114 &670901453876329822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,7 +447,7 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
---- !u!114 &1013215030506852387
+--- !u!114 &1425350218407599115
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438,16 +456,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
+  m_Script: {fileID: 11500000, guid: 9840a28297a53d449903f34dc60157bb, type: 3}
+  m_Name: UnityEventQuestAction
   m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: Hey buddy, can you find my cube?
+  m_onExecute:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3378003946316626145
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5682394e55a192147a020b9edf624e51, type: 3}
+  m_Name: MessageQuestCondition
+  m_EditorClassIdentifier: 
+  m_alreadyTrue: 0
+  m_senderSpecifier: 0
+  m_senderID:
+    m_text: 
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &5218210597475247706
+  m_targetSpecifier: 0
+  m_targetID:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_message:
+    m_text: StartQuest
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_parameter:
+    m_text: TestQuest
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_value:
+    m_valueType: 0
+    m_intValue: 0
+    m_stringValue: 
+--- !u!114 &4243993673424661780
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -467,7 +533,7 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_headingLevel: 1
---- !u!114 &5791767338426582833
+--- !u!114 &5218210597475247706
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -479,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
   m_Name: HeadingTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 2
   m_useQuestTitle: 1
   m_headingText:
     m_text: 
@@ -499,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
   m_Name: HeadingTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 5
   m_useQuestTitle: 1
   m_headingText:
     m_text: 
@@ -519,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
   m_Name: BodyTextQuestContent
   m_EditorClassIdentifier: 
-  m_contentID: -1
+  m_contentID: 8
   m_bodyText:
     m_text: You need to find the cube.
     m_stringAsset: {fileID: 0}
