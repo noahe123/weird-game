@@ -20,6 +20,19 @@ MonoBehaviour:
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
   m_headingLevel: 1
+--- !u!114 &-6504179515271790064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94e8fb3b9b54114cbe8185003729c1b, type: 3}
+  m_Name: SceneEventQuestAction
+  m_EditorClassIdentifier: 
+  m_guid: d48104a7-ff06-470a-8b8c-71c26085db50
 --- !u!114 &-5878511988373897122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -38,21 +51,6 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &-5753361081859852104
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b99cc2a156c22e46b4fb74b06a4d1e8, type: 3}
-  m_Name: AlertQuestAction
-  m_EditorClassIdentifier: 
-  m_contentList:
-  - {fileID: 670901453876329822}
-  m_contentListSerializationProxy: []
 --- !u!114 &-4115731493353697295
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +135,41 @@ MonoBehaviour:
   m_contentID: 10
   m_bodyText:
     m_text: Thanks for finding that cube.
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+--- !u!114 &-740926999686183362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b99cc2a156c22e46b4fb74b06a4d1e8, type: 3}
+  m_Name: AlertQuestAction
+  m_EditorClassIdentifier: 
+  m_contentList:
+  - {fileID: -350633420437408646}
+  m_contentListSerializationProxy: []
+--- !u!114 &-350633420437408646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
+  m_Name: BodyTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_bodyText:
+    m_text: 'Complete
+
+'
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
@@ -367,7 +400,8 @@ MonoBehaviour:
       - m_contentList: []
       - m_contentList: []
     - m_actionList:
-      - {fileID: -5753361081859852104}
+      - {fileID: -740926999686183362}
+      - {fileID: -6504179515271790064}
       m_categorizedContentList:
       - m_contentList:
         - {fileID: -1367494667830729763}
@@ -388,24 +422,6 @@ MonoBehaviour:
   m_textTable: {fileID: 0}
   m_goalEntityTypeName: 
   m_nextContentID: 11
---- !u!114 &670901453876329822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ed0c4e68ee98946bb5016adda42373, type: 3}
-  m_Name: BodyTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_bodyText:
-    m_text: Complete
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
 --- !u!114 &762455715706569522
 MonoBehaviour:
   m_ObjectHideFlags: 1

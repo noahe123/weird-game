@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Cinemachine;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class DialogueSystem : MonoBehaviour
     public float textSpeed;
 
     private int index;
+
+    public CinemachineVirtualCamera virtualCam;
 
     // Start is called before the first frame update
     void Start()
@@ -104,11 +107,20 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
+
+
     public void HideSpeechBubble()
     {
         transform.parent.gameObject.GetComponent<Image>().enabled = false;
         textComponent.enabled = false;
         Debug.Log("Hiding Speech Bubble...");
+
+    }
+
+    public void EndCam()
+    {
+        virtualCam.enabled = false;
+
     }
 
     public void ShowSpeechBubble()
@@ -122,6 +134,8 @@ public class DialogueSystem : MonoBehaviour
     public void RefreshFirstLine(string myLine)
     {
         ShowSpeechBubble();
+        virtualCam.enabled = true;
+
 
         lines[0] = myLine;
         if (index < lines.Length - 1)
@@ -129,7 +143,28 @@ public class DialogueSystem : MonoBehaviour
             //index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
+            Invoke("EndCam", 2.5f);
             Invoke("HideSpeechBubble", 5f);
+        }
+        else
+        {
+            textComponent.enabled = false;
+        }
+    }
+
+    public void RefreshFirstLineNoCam(string myLine)
+    {
+        ShowSpeechBubble();
+
+        lines[0] = myLine;
+        if (index < lines.Length - 1)
+        {
+            //index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+            Invoke("EndCam", 2.5f);
+            Invoke("HideSpeechBubble", 5f);
+
         }
         else
         {
