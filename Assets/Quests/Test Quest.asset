@@ -66,26 +66,6 @@ MonoBehaviour:
   m_Name: SceneEventQuestAction
   m_EditorClassIdentifier: 
   m_guid: 65cee807-5547-4338-b9a3-4edfb998973c
---- !u!114 &-3425376191482577087
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
-  m_Name: HeadingTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_useQuestTitle: 1
-  m_headingText:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_headingLevel: 1
 --- !u!114 &-3390427576180081698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -122,6 +102,26 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
+--- !u!114 &-1789432209550803046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
+  m_Name: HeadingTextQuestContent
+  m_EditorClassIdentifier: 
+  m_contentID: -1
+  m_useQuestTitle: 1
+  m_headingText:
+    m_text: 
+    m_stringAsset: {fileID: 0}
+    m_textTable: {fileID: 0}
+    m_textTableFieldID: 0
+  m_headingLevel: 1
 --- !u!114 &-1367494667830729763
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,8 +208,7 @@ MonoBehaviour:
     - m_contentList: []
     - m_contentList: []
     - m_contentList: []
-  - m_actionList:
-    - {fileID: 1425350218407599115}
+  - m_actionList: []
     m_categorizedContentList:
     - m_contentList:
       - {fileID: 5218210597475247706}
@@ -220,7 +219,7 @@ MonoBehaviour:
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList:
-      - {fileID: 6908426031061427377}
+      - {fileID: -1789432209550803046}
       - {fileID: -3390427576180081698}
     - m_contentList: []
   - m_actionList: []
@@ -274,8 +273,7 @@ MonoBehaviour:
     - m_actionList: []
       m_categorizedContentList:
       - m_contentList: []
-      - m_contentList:
-        - {fileID: -3425376191482577087}
+      - m_contentList: []
       - m_contentList: []
     m_conditionSet:
       m_conditionList: []
@@ -447,33 +445,6 @@ MonoBehaviour:
     m_valueType: 0
     m_intValue: 0
     m_stringValue: 
---- !u!114 &1425350218407599115
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9840a28297a53d449903f34dc60157bb, type: 3}
-  m_Name: UnityEventQuestAction
-  m_EditorClassIdentifier: 
-  m_onExecute:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &3378003946316626145
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -546,26 +517,6 @@ MonoBehaviour:
   m_Name: HeadingTextQuestContent
   m_EditorClassIdentifier: 
   m_contentID: 2
-  m_useQuestTitle: 1
-  m_headingText:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_headingLevel: 1
---- !u!114 &6908426031061427377
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
-  m_Name: HeadingTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: 5
   m_useQuestTitle: 1
   m_headingText:
     m_text: 
