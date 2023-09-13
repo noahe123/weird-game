@@ -10,9 +10,13 @@ public class MoveTowardsMouse : MonoBehaviour
     private Vector3 targetPosition;
     private bool isMoving = false;
 
+    PlayerController playerController;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        playerController = FindObjectOfType<PlayerController>();
     }
 
     void Update()
@@ -48,7 +52,7 @@ public class MoveTowardsMouse : MonoBehaviour
             rb.AddForce(desiredVelocity * rb.mass, ForceMode.Force);
 
             // If the distance to the target is very small, stop moving.
-            if (Vector3.Distance(rb.position, targetPosition) < 0.1f)
+            if (Vector3.Distance(rb.position, targetPosition) < 10f)
             {
                 isMoving = false;
             }

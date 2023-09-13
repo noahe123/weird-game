@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed, strafeSpeed, jumpForce;
-    public float minDistanceToTarget = 2.0f; // Minimum distance to start moving towards the target.
+    public float minDistanceToTarget = 6.0f; // Minimum distance to start moving towards the target.
 
     public Rigidbody hips;
     public bool isGrounded;
@@ -105,29 +105,33 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Calculate the direction from the player's hips to the target.
+        Vector3 targetDirection = (target.position - hips.position).normalized;
+
+
+        Vector3 directionToTarget = target.position - transform.position;
+
+        directionToTarget.Normalize();
+
+        root.rotation = Quaternion.LookRotation(directionToTarget);
+
+
+        Quaternion desiredRot = Quaternion.LookRotation(directionToTarget);
+
+        hipJoint.targetRotation = Quaternion.Euler(new Vector3(0, -desiredRot.eulerAngles.y, 0));
+
+
         // Calculate the distance between the player's hips and the target.
         float distanceToTarget = Vector3.Distance(hips.position, target.position);
 
         // Check if the target is within the minimum distance to start moving towards it.
         if (distanceToTarget >= minDistanceToTarget)
         {
-            // Calculate the direction from the player's hips to the target.
-            Vector3 targetDirection = (target.position - hips.position).normalized;
 
             // Move the player's hips towards the target.
             hips.AddForce(targetDirection * speed);
 
 
-            Vector3 directionToTarget = target.position - transform.position;
-
-            directionToTarget.Normalize();
-
-            root.rotation = Quaternion.LookRotation(directionToTarget);
-
-
-            Quaternion desiredRot = Quaternion.LookRotation(directionToTarget);
-
-            hipJoint.targetRotation = Quaternion.Euler(new Vector3(0,-desiredRot.eulerAngles.y,0));
 
             animator.SetBool("isWalk", true);
             animator.SetBool("isRun", true);
