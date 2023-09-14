@@ -23,7 +23,7 @@ public class CameraControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-      //  CamControl();
+       CamControl();
     }
 
     void CamControl()
@@ -36,11 +36,11 @@ public class CameraControl : MonoBehaviour
         smoothX = Mathf.SmoothDamp(smoothX, mouseX, ref smoothXVelocity, smoothTime);
         smoothY = Mathf.SmoothDamp(smoothY, mouseY, ref smoothYVelocity, smoothTime);
 
-        //Quaternion rootRotation = Quaternion.Euler(smoothY, smoothX, 0);
+        Quaternion rootRotation = Quaternion.Euler(smoothY, smoothX, 0);
 
 
-
+        hipJoint.targetRotation = rootRotation;
         //hipJoint.targetRotation = Quaternion.Euler(0, -smoothX, 0);
-        //headJoint.targetRotation = Quaternion.Euler(-smoothY + headOffset, 0, 0);
+        headJoint.targetRotation = Quaternion.Euler(-smoothY + headOffset, 0, 0);
     }
 }

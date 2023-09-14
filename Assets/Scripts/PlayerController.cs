@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         hips = GetComponent<Rigidbody>();
         root = FindObjectOfType<CameraControl>().root;
     }
-    /*
+    
     private void FixedUpdate()
     {
 
@@ -100,10 +100,10 @@ public class PlayerController : MonoBehaviour
                 isGrounded = false;
             }
         }
-    }*/
+    }
 
 
-    private void FixedUpdate()
+  /*  private void FixedUpdate()
     {
         // Calculate the direction from the player's hips to the target.
         Vector3 targetDirection = (target.position - hips.position).normalized;
@@ -156,6 +156,6 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
+  */
 
 }
