@@ -110,9 +110,9 @@ MonoBehaviour:
   root: {fileID: 5931329715086622607}
   smoothTime: 0.03
   rotationSmoothTime: 0.2
-  stomachOffset: 0
+  headOffset: 0
   hipJoint: {fileID: 30467995397360918}
-  stomachJoint: {fileID: 3946539949249509461}
+  headJoint: {fileID: 0}
 --- !u!114 &708929781567696554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1674,6 +1674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &1754911309369803611
 MonoBehaviour:
@@ -1858,6 +1859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &7196072940382064072
 MonoBehaviour:
@@ -2043,9 +2045,17 @@ MonoBehaviour:
   speed: 20
   strafeSpeed: 30
   jumpForce: 2000
+  minDistanceToTarget: 6
   hips: {fileID: 4157487892999749865}
   isGrounded: 0
+  target: {fileID: 0}
   animator: {fileID: 0}
+  root: {fileID: 0}
+  player: {fileID: 0}
+  hipJoint: {fileID: 0}
+  headJoint: {fileID: 0}
+  rotationSmoothTime: 0
+  desiredRot: {x: 0, y: 0, z: 0}
 --- !u!114 &4822235356185228791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,6 +2068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &4941926225426017946
 MonoBehaviour:
@@ -2242,6 +2253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &182609126840904826
 MonoBehaviour:
@@ -2447,6 +2459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &5190266494771964837
 MonoBehaviour:
@@ -2643,6 +2656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &3972384700301741431
 MonoBehaviour:
@@ -2848,6 +2862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &8977516942305683793
 MonoBehaviour:
@@ -3029,6 +3044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &2228220074884915654
 MonoBehaviour:
@@ -3213,6 +3229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &8344713703143514269
 MonoBehaviour:
@@ -3481,6 +3498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &2398849890148779428
 MonoBehaviour:
@@ -3665,6 +3683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a9c251a0848254abb3c0f92b7d76e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRenderer: {fileID: 0}
   playerController: {fileID: 0}
 --- !u!114 &2293283532731737900
 MonoBehaviour:
