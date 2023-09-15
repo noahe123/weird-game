@@ -38,9 +38,9 @@ public class CameraControl : MonoBehaviour
 
         Quaternion rootRotation = Quaternion.Euler(smoothY, smoothX, 0);
 
-
-        hipJoint.targetRotation = rootRotation;
-        //hipJoint.targetRotation = Quaternion.Euler(0, -smoothX, 0);
+        root.rotation = rootRotation;
+        //hipJoint.targetRotation = rootRotation;
+        hipJoint.targetRotation = Quaternion.Euler(0, -smoothX, 0);
         headJoint.targetRotation = Quaternion.Euler(-smoothY + headOffset, 0, 0);
     }
 }

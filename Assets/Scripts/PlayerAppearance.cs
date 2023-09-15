@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,15 @@ public class PlayerAppearance : MonoBehaviour
         public Vector3 maxScale; // Maximum scale values
         public Color minColor; // Minimum color values
         public Color maxColor; // Maximum color values
+        public int materialIndex;
     }
+
+    public List<string> colorOptions = new List<string>() {};
+    public List<Color> colorList = new List<Color>() {};
+
+
+
+
 
     public enum BodyPartType
     {
@@ -31,6 +40,8 @@ public class PlayerAppearance : MonoBehaviour
     private void Start()
     {
         CreateSliders();
+
+
     }
 
     public void AdjustBodyPart(int bodyPartIndex, float value)
@@ -84,7 +95,7 @@ public class PlayerAppearance : MonoBehaviour
                     Renderer renderer = settings.bodyPart.GetComponent<Renderer>();
                     if (renderer != null)
                     {
-                        renderer.materials[2].color = color;
+                        renderer.materials[settings.materialIndex].color = color;
                     }
                     else
                     {
@@ -131,8 +142,10 @@ public class PlayerAppearance : MonoBehaviour
             else if (settings.partType == BodyPartType.Color)
             {
                 GameObject dropdownObject = Instantiate(dropdownPrefab, sliderParent);
-                Dropdown dropdown = dropdownObject.GetComponent<Dropdown>();
+                TMP_Dropdown dropdown = dropdownObject.GetComponent<TMP_Dropdown>();
                 PlayerAppearanceControl appearanceControl = dropdownObject.GetComponent<PlayerAppearanceControl>();
+
+
 
                 if (dropdown != null && appearanceControl != null)
                 {
@@ -140,11 +153,21 @@ public class PlayerAppearance : MonoBehaviour
 
                     dropdown.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = settings.bodyPartName;
 
+                    dropdown.options.Clear();
+                    
+                    TMP_Text text = dropdown.GetComponent<TMP_Text>();
+
+                    appearanceControl.myColorList = colorList;
+
+                    foreach (string t in colorOptions)
+                    {
+                        dropdown.options.Add(new TMP_Dropdown.OptionData() { text = t });
+                    }
                     //dropdown.onValueChanged.AddListener((value) => AdjustBodyPart(appearanceControl.bodyPartIndex, value));
                 }
                 else
                 {
-                    Debug.LogError("Slider prefab is missing dropdown or PlayerAppearanceControl component.");
+                    Debug.LogError("Dropdown prefab is missing dropdown or PlayerAppearanceControl component.");
                 }
             }
         }

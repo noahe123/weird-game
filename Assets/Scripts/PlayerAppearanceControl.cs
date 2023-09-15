@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Drawing;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +10,10 @@ public class PlayerAppearanceControl : MonoBehaviour
     public int bodyPartIndex; // Index of the body part you want to control
 
     private Slider slider;
-    private Dropdown dropdown;
+    private TMP_Dropdown dropdown;
+
+    public List<UnityEngine.Color> myColorList = new List<UnityEngine.Color>() { };
+
 
     private void Start()
     {
@@ -16,9 +21,9 @@ public class PlayerAppearanceControl : MonoBehaviour
         {
             slider = GetComponent<Slider>();
         }
-        else if (GetComponent<Dropdown>() != null)
+        else if (GetComponent<TMP_Dropdown>() != null)
         {
-            dropdown = GetComponent<Dropdown>();
+            dropdown = GetComponent<TMP_Dropdown>();
         }
 
         bodyPartScaler = FindObjectOfType<PlayerAppearance>();
@@ -38,18 +43,10 @@ public class PlayerAppearanceControl : MonoBehaviour
         // Ensure you have a reference to the BodyPartScaler script and a valid body part index
         if (bodyPartScaler != null && bodyPartIndex >= 0 && bodyPartIndex < bodyPartScaler.bodyPartsToAdjust.Length)
         {
-            switch(dropdown.value)
-            {
-                case 0:
-                    bodyPartScaler.AdjustBodyPart(bodyPartIndex, new UnityEngine.Color(80, 180, 255));
-                    break;
-                case 1:
-                    bodyPartScaler.AdjustBodyPart(bodyPartIndex, new UnityEngine.Color(90, 50, 20));
-                    break;
-                case 2:
-                    bodyPartScaler.AdjustBodyPart(bodyPartIndex, new UnityEngine.Color(255, 80, 80));
-                    break;
-            }
+
+            //blue
+            bodyPartScaler.AdjustBodyPart(bodyPartIndex, myColorList[dropdown.value]);
+
         }
     }
 }

@@ -1,0 +1,15 @@
+SFX:
+- find and implement sounds
+
+planet head game idea?
+
+things to add:
+ziplines
+sfx
+big red buttons
+cool scene transitions
+dr seuss foliage
+beach ball / soccer ball
+"musical" foliage (like in pikuniku)
+NPC walk / animation system
+1 playable scene
