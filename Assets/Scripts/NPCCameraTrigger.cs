@@ -15,14 +15,14 @@ public class NPCCameraTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            virtualCam.SetActive(true);
+            //virtualCam.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            virtualCam.SetActive(false);
+            //virtualCam.SetActive(false);
         }
     }
 }

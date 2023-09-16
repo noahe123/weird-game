@@ -255,7 +255,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.33333334
-        value: {x: 158.419, y: -0.72198486, z: -9.6380005}
+        value: {x: 116.16, y: 1.7870026, z: -15.901001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -2961,7 +2961,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 158.419
+        value: 116.16
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3000,7 +3000,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -0.72198486
+        value: 1.7870026
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3039,7 +3039,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: -9.6380005
+        value: -15.901001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -4368,7 +4368,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: metarig/spine/thigh.R
+    path: metarig/spine/thigh.R/shin.R
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4380,7 +4380,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: metarig/spine/thigh.R
+    path: metarig/spine/thigh.R/shin.R
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4392,7 +4392,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: metarig/spine/thigh.R
+    path: metarig/spine/thigh.R/shin.R
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4476,7 +4476,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: metarig/spine/thigh.R/shin.R
+    path: metarig/spine/thigh.R
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4488,7 +4488,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: metarig/spine/thigh.R/shin.R
+    path: metarig/spine/thigh.R
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -4500,7 +4500,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: metarig/spine/thigh.R/shin.R
+    path: metarig/spine/thigh.R
     classID: 4
     script: {fileID: 0}
     flags: 0

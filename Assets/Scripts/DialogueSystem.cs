@@ -15,14 +15,20 @@ public class DialogueSystem : MonoBehaviour
 
     public CinemachineVirtualCamera virtualCam;
 
+    NPC myNPC;
+
     bool isTyping;
 
     // Start is called before the first frame update
     void Start()
     {
+        myNPC = transform.root.GetComponent<NPC>();
+
+
         textComponent.text = string.Empty;
         StartDialogue();
         HideSpeechBubble();
+
     }
 
     /*
@@ -117,6 +123,10 @@ public class DialogueSystem : MonoBehaviour
         textComponent.enabled = false;
         Debug.Log("Hiding Speech Bubble...");
 
+        myNPC.FinishTalking();
+        myNPC.FinishFlailing();
+
+
     }
 
     public void EndCam()
@@ -131,6 +141,8 @@ public class DialogueSystem : MonoBehaviour
         textComponent.enabled = true;
         Debug.Log("Showing Speech Bubble...");
 
+        myNPC.Talk();
+        myNPC.Flail();
     }
 
     public void RefreshFirstLine(string myLine)
@@ -139,7 +151,7 @@ public class DialogueSystem : MonoBehaviour
         CancelInvoke();
 
         ShowSpeechBubble();
-        //virtualCam.enabled = true;
+        virtualCam.enabled = true;
 
 
         lines[0] = myLine;
@@ -150,7 +162,7 @@ public class DialogueSystem : MonoBehaviour
 
                 StartCoroutine(TypeLine());
             
-            //Invoke("EndCam", 2.5f);
+            Invoke("EndCam", 2.5f);
             Invoke("HideSpeechBubble", 5f);
         }
         else
