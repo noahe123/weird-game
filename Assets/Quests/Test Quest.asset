@@ -100,26 +100,6 @@ MonoBehaviour:
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
---- !u!114 &-1789432209550803046
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47e1bb9cdd9a474c8d3f5d555d7533a, type: 3}
-  m_Name: HeadingTextQuestContent
-  m_EditorClassIdentifier: 
-  m_contentID: -1
-  m_useQuestTitle: 1
-  m_headingText:
-    m_text: 
-    m_stringAsset: {fileID: 0}
-    m_textTable: {fileID: 0}
-    m_textTableFieldID: 0
-  m_headingLevel: 1
 --- !u!114 &-1367494667830729763
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -252,7 +232,6 @@ MonoBehaviour:
     m_categorizedContentList:
     - m_contentList: []
     - m_contentList:
-      - {fileID: -1789432209550803046}
       - {fileID: -3390427576180081698}
     - m_contentList: []
   - m_actionList: []
@@ -554,7 +533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_contentID: 8
   m_bodyText:
-    m_text: You need to find the cube.
+    m_text: you've been dared to push that button
     m_stringAsset: {fileID: 0}
     m_textTable: {fileID: 0}
     m_textTableFieldID: 0
